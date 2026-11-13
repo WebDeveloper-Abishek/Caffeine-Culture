@@ -1,0 +1,77 @@
+<div class="site-header-content content-width">
+  <nav class="site-navbar" aria-label="Primary navigation">
+    <a class="brand" href="index.html" aria-label="The Caffeine Culture home">
+      <img class="brand-logo" src="assets/images/Logo/Logo%20Transparent.png" alt="" width="50" height="50">
+      <span class="eyebrow">Caffeine Culture</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"
+      aria-label="Open navigation">
+      <span class="nav-toggle-line" aria-hidden="true"></span>
+      <span class="nav-toggle-line" aria-hidden="true"></span>
+      <span class="nav-toggle-line" aria-hidden="true"></span>
+    </button>
+    <div class="nav-menu" id="primary-nav">
+      <ul class="navbar-links">
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item nav-item-products">
+          <button class="nav-link nav-products-toggle" id="products-toggle" type="button" aria-expanded="false"
+            aria-controls="products-submenu">
+            Our Products
+            <svg class="nav-products-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <ul class="nav-submenu" id="products-submenu" aria-labelledby="products-toggle">
+            <li><a href="products.html?category=coffee#product-catalog" class="nav-submenu-link">Coffees</a></li>
+            <li><a href="products.html?category=cakes#product-catalog" class="nav-submenu-link">Cakes</a></li>
+            <li><a href="products.html?category=buns#product-catalog" class="nav-submenu-link">Buns</a></li>
+            <li><a href="products.html?category=brownies#product-catalog" class="nav-submenu-link">Brownies</a></li>
+            <li><a href="products.html?category=beverages#product-catalog" class="nav-submenu-link">Beverages</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="club.html" class="nav-link">Member Club</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </li>
+      </ul>
+      <form class="site-search desktop-search" role="search" action="products.html">
+        <label class="sr-only" for="desktop-search-input">Search products</label>
+        <input id="desktop-search-input" type="search" name="q" placeholder="Search coffee..." autocomplete="off">
+        <button type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="10.8" cy="10.8" r="6.3"></circle>
+            <path d="m15.5 15.5 4.2 4.2"></path>
+          </svg>
+        </button>
+      </form>
+      <button class="mobile-search-toggle" type="button" aria-expanded="false" aria-controls="mobile-search"
+        aria-label="Open product search">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="10.8" cy="10.8" r="6.3"></circle>
+          <path d="m15.5 15.5 4.2 4.2"></path>
+        </svg>
+      </button>
+      <form class="site-search mobile-search" id="mobile-search" role="search" action="products.html">
+        <label class="sr-only" for="mobile-search-input">Search products</label>
+        <input id="mobile-search-input" type="search" name="q" placeholder="Search coffee..." autocomplete="off">
+        <button type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="10.8" cy="10.8" r="6.3"></circle>
+            <path d="m15.5 15.5 4.2 4.2"></path>
+          </svg>
+        </button>
+      </form>
+      <div class="nav-actions">
+        <a class="nav-cart btn ghost-btn" href="cart.html" aria-label="Shopping cart, 0 items">
+          Cart <span class="nav-cart-count" data-cart-count>0</span>
+        </a>
+        <a class="nav-cta btn action-btn" href="club.html">Join the Club</a>
+      </div>
+    </div>
+  </nav>
+</div>

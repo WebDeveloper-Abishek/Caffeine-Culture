@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review your order and checkout details with The Caffeine Culture.">
+  <meta name="theme-color" content="#100b08">
+  <title>Checkout | The Caffeine Culture</title>
+  <link rel="icon" type="image/png" href="assets/images/Logo/Logo%20Transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:opsz,wdth,wght@18..144,87..112,300..900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main-content" class="site-page shop-page checkout-page" tabindex="-1">
+    <section class="shop-hero">
+      <div class="content-width">
+        <p class="eyebrow">One more step</p>
+        <h1 class="h1-title light">Checkout.</h1>
+        <p>Review your order and choose how we can get it to you.</p>
+      </div>
+    </section>
+
+    <section class="shop-section">
+      <div class="content-width">
+        <ol class="checkout-steps" aria-label="Checkout progress">
+          <li>Cart</li>
+          <li aria-current="step">Your details</li>
+          <li>Payment</li>
+        </ol>
+
+        <div class="checkout-layout">
+          <form class="checkout-form" data-checkout-form>
+            <fieldset>
+              <legend>Your details</legend>
+              <label for="checkout-name">Full name</label>
+              <input class="form-control" id="checkout-name" name="name" autocomplete="name" required>
+              <label for="checkout-email">Email address</label>
+              <input class="form-control" id="checkout-email" name="email" type="email" autocomplete="email" required>
+              <label for="checkout-phone">Phone number</label>
+              <input class="form-control" id="checkout-phone" name="phone" type="tel" autocomplete="tel" required>
+            </fieldset>
+
+            <fieldset>
+              <legend>Pickup or delivery</legend>
+              <div class="fulfilment-options">
+                <label class="fulfilment-option">
+                  <input type="radio" name="fulfilment" value="pickup" checked>
+                  <span><strong>Pick up</strong><small>Collect from our Colombo cafe</small></span>
+                </label>
+                <label class="fulfilment-option">
+                  <input type="radio" name="fulfilment" value="delivery">
+                  <span><strong>Delivery</strong><small>We’ll confirm delivery details with you</small></span>
+                </label>
+              </div>
+              <label for="checkout-address">Address or pickup note <span>(optional)</span></label>
+              <textarea class="form-control" id="checkout-address" name="address" rows="3"
+                autocomplete="street-address"></textarea>
+            </fieldset>
+
+            <button class="btn action-btn" type="submit">Continue to payment</button>
+            <p class="checkout-disclaimer">Demo checkout only. No payment is collected and no payment provider is connected.</p>
+            <p class="checkout-notice" data-checkout-notice tabindex="-1" role="status" hidden>
+              Payment is not connected yet. Your cart is saved and no order has been placed.
+            </p>
+          </form>
+
+          <aside class="checkout-summary" aria-labelledby="checkout-summary-title">
+            <p class="eyebrow">Your order</p>
+            <h2 id="checkout-summary-title">A little something good.</h2>
+            <ul class="checkout-items" data-checkout-items></ul>
+            <div class="cart-total-row">
+              <span>Subtotal</span>
+              <strong data-checkout-total>Rs. 0</strong>
+            </div>
+            <p class="cart-summary-note">Any delivery details or charges will be confirmed before payment is available.</p>
+            <a class="shop-text-link" href="cart.html">Back to cart</a>
+          </aside>
+        </div>
+
+        <div class="cart-empty" data-checkout-empty hidden>
+          <p class="eyebrow">Your cart is waiting</p>
+          <h2>Add something delicious first.</h2>
+          <a class="btn action-btn" href="products.html">Explore the menu</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+
+</html>

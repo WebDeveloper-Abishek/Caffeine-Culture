@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore coffees, cakes, buns, brownies, and beverages from The Caffeine Culture.">
+  <meta name="theme-color" content="#100b08">
+  <title>Our Products | The Caffeine Culture</title>
+  <link rel="icon" type="image/png" href="assets/images/Logo/Logo%20Transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:opsz,wdth,wght@18..144,87..112,300..900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main-content" class="site-page products-page" tabindex="-1">
+    <section class="page-hero products-hero" aria-labelledby="products-title">
+      <div class="content-width page-hero-content">
+        <p class="eyebrow">Good things, brewed fresh</p>
+        <h1 class="h1-title light" id="products-title">Find your<br>new favorite.</h1>
+        <p class="body-text light">Discover coffees, cakes, buns, brownies, and refreshing beverages made for your moment.</p>
+        <a class="btn action-btn" href="#product-catalog">Explore the menu</a>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="product-catalog" aria-labelledby="catalog-title">
+      <div class="content-width">
+        <header class="section-intro">
+          <p class="eyebrow">Made for your moment</p>
+          <h2 class="h2-subtitle" id="catalog-title">Our products</h2>
+          <p class="section-description">Choose a collection or search for a favorite.</p>
+        </header>
+
+        <div class="catalog-tools">
+          <div class="catalog-filters" role="group" aria-label="Filter products by category">
+            <button type="button" class="filter-chip" data-product-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-chip" data-product-filter="coffee" aria-pressed="false">Coffees</button>
+            <button type="button" class="filter-chip" data-product-filter="cakes" aria-pressed="false">Cakes</button>
+            <button type="button" class="filter-chip" data-product-filter="buns" aria-pressed="false">Buns</button>
+            <button type="button" class="filter-chip" data-product-filter="brownies" aria-pressed="false">Brownies</button>
+            <button type="button" class="filter-chip" data-product-filter="beverages" aria-pressed="false">Beverages</button>
+          </div>
+          <form class="catalog-search-form site-search" role="search">
+            <label class="sr-only" for="catalog-search">Search products</label>
+            <input id="catalog-search" data-catalog-search type="search" name="q" placeholder="Search the menu..."
+              autocomplete="off">
+            <button type="submit" aria-label="Search products">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="10.8" cy="10.8" r="6.3"></circle>
+                <path d="m15.5 15.5 4.2 4.2"></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="catalog-status">
+          <p data-product-count aria-live="polite"></p>
+        </div>
+        <div class="product-grid" data-product-catalog aria-live="polite"></div>
+        <p class="catalog-empty" data-product-empty hidden>No items match that search. Try another coffee or category.</p>
+      </div>
+    </section>
+
+    <section class="catalog-cta light-section">
+      <div class="content-width">
+        <p class="eyebrow">Need a recommendation?</p>
+        <h2>There’s always a good cup for you.</h2>
+        <a class="btn ghost-btn" href="contact.html">Talk to our team</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+body {
+  font-family: $font-family-main;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h5,
+p {
+  margin: 0;
+}
+
+/* Reusable heading and body classes */
+
+/* H1 */
+@mixin h1-styles {
+  font-weight: 400;
+  @include text-styling(
+    $font-family-main,
+    $color-coffee-brown,
+    $h1-mobile-size,
+    $h1-mobile-letter-spacing,
+    $h1-mobile-line-height,
+    $h1-desktop-size,
+    $h1-desktop-letter-spacing,
+    $h1-desktop-line-height
+  );
+}
+
+/* H2 */
+@mixin h2-styles {
+  font-weight: 400;
+  @include text-styling(
+    $font-family-sub,
+    $color-accent-amber,
+    $h2-mobile-size,
+    $h2-mobile-letter-spacing,
+    $h2-mobile-line-height,
+    $h2-desktop-size,
+    $h2-desktop-letter-spacing,
+    $h2-desktop-line-height
+  );
+}
+
+/* H3 */
+@mixin h3-styles {
+  font-weight: 400;
+  font-style: italic;
+  @include text-styling(
+    $font-family-main,
+    $color-coffee-dark,
+    $h3-mobile-size,
+    $h3-mobile-letter-spacing,
+    $h3-mobile-line-height,
+    $h3-desktop-size,
+    $h3-desktop-letter-spacing,
+    $h3-desktop-line-height
+  );
+}
+
+/* Body Text */
+@mixin body-text-styles {
+  font-weight: 400;
+  @include text-styling(
+    $font-family-sub,
+    $color-bg-primary,
+    $body-mobile-size,
+    $body-mobile-letter-spacing,
+    $body-mobile-line-height,
+    $body-desktop-size,
+    $body-desktop-letter-spacing,
+    $body-desktop-line-height
+  );
+}
+
+/* Apply styles */
+h1,
+.h1-title {
+  @include h1-styles;
+
+  &.light {
+    color: $color-cream;
+  }
+}
+
+h2,
+.h2-subtitle {
+  @include h2-styles;
+
+  &.light {
+    color: $color-accent-amber;
+  }
+}
+
+h3,
+.h3-style {
+  @include h3-styles;
+
+  &.light {
+    color: $color-coffee-light;
+  }
+}
+
+.body-text {
+  @include body-text-styles;
+
+  &.light {
+    color: $color-white;
+  }
+}
+
+/* Eyebrow Tag */
+.eyebrow {
+  font-family: $font-family-sub;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: $color-accent-amber;
+
+  @include tablet-landscape {
+    font-size: 17px;
+    letter-spacing: 2.38px;
+  }
+}

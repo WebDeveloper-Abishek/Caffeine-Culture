@@ -1,0 +1,73 @@
+/* =========================
+   COLORS
+========================= */
+
+$color-bg-primary: #100b08;
+$color-bg-secondary: #1b120d;
+
+$color-coffee-brown: #4c2b0b;
+$color-coffee-light: #ba936a;
+$color-coffee-dark: #934e1a;
+$color-gold: #c89e5b;
+$color-accent-amber: #a07235;
+$color-cream: #edd9b6;
+$color-white: #ffffff;
+
+/* Gradient Colors */
+$gradient-hero: linear-gradient(125deg, #38271e 0%, #1b120d 48%, #251711 100%);
+$gradient-amber-glow: linear-gradient(135deg, #8a5730, #c9a15f);
+
+/* Border / Divider Colors */
+$color-divider: #2a2a2a;
+
+/* =========================
+   BREAKPOINTS
+========================= */
+
+$screen-tablet-portrait-min: 768px;
+$screen-tablet-landscape-min: 992px;
+$screen-laptop-min: 1200px;
+$screen-desktop-min: 1440px;
+$screen-wide-min: 1600px;
+
+/* =========================
+   DESKTOP TYPOGRAPHY
+========================= */
+
+/* Fonts */
+$font-family-main: "Merriweather", serif;
+$font-family-sub: "Roboto Slab", serif;
+
+$h1-desktop-size: 46px;
+$h2-desktop-size: 38px;
+$h3-desktop-size: 28px;
+$body-desktop-size: 17px;
+
+$h1-desktop-line-height: 1;
+$h2-desktop-line-height: 1.167;
+$h3-desktop-line-height: 1.1875;
+$body-desktop-line-height: 1.6;
+
+$h1-desktop-letter-spacing: 1.5;
+$h2-desktop-letter-spacing: 1;
+$h3-desktop-letter-spacing: 0.5;
+$body-desktop-letter-spacing: 1;
+
+/* =========================
+   MOBILE TYPOGRAPHY
+========================= */
+
+$h1-mobile-size: 38px;
+$h2-mobile-size: 27px;
+$h3-mobile-size: 25px;
+$body-mobile-size: 15px;
+
+$h1-mobile-line-height: 1.35;
+$h2-mobile-line-height: 1.154;
+$h3-mobile-line-height: 1.125;
+$body-mobile-line-height: 1.6;
+
+$h1-mobile-letter-spacing: 0.5;
+$h2-mobile-letter-spacing: 0.3;
+$h3-mobile-letter-spacing: 0.2;
+$body-mobile-letter-spacing: 0.7;

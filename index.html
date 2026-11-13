@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Caffeine Culture serves premium coffee in a welcoming Colombo cafe.">
+  <meta name="theme-color" content="#100b08">
+  <title>The Caffeine Culture</title>
+  <link rel="icon" type="image/png" href="assets/images/Logo/Logo%20Transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:opsz,wdth,wght@18..144,87..112,300..900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="home-page" id="main-content" tabindex="-1">
+    <section class="home-hero" aria-labelledby="home-hero-title">
+      <div class="hero-slider swiper" id="hero-slider" role="region" aria-roledescription="carousel"
+        aria-label="Coffee moments">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide hero-slide">
+            <img class="hero-slide-image" src="assets/images/Background/Background.jpg" alt="" fetchpriority="high">
+          </div>
+          <div class="swiper-slide hero-slide">
+            <img class="hero-slide-image" src="assets/images/Background/Background%202.jpg" alt="" loading="lazy">
+          </div>
+          <div class="swiper-slide hero-slide">
+            <img class="hero-slide-image" src="assets/images/Background/Background%203.jpg" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="hero-content content-width">
+        <p class="eyebrow">The Caffeine Culture · Colombo</p>
+        <h1 class="h1-title" id="home-hero-title">Brewed for<br>your moment.</h1>
+        <p class="body-text">Premium beans, carefully brewed drinks, and a welcoming place to slow down in Colombo.</p>
+        <div class="button-row">
+          <a class="btn action-btn" href="products.html">Shop Now</a>
+        </div>
+      </div>
+      <div class="hero-slider-controls arrows-pair" role="group" aria-label="Hero slider controls">
+        <button class="slider-arrow dark-arrow" type="button" data-hero-slider-prev aria-label="Previous background"
+          aria-controls="hero-slider">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <button class="slider-arrow dark-arrow" type="button" data-hero-slider-next aria-label="Next background"
+          aria-controls="hero-slider">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+    </section>
+    <section class="featured-drinks" id="featured-drinks" aria-labelledby="featured-drinks-title">
+      <div class="content-width">
+        <header class="section-intro">
+          <p class="eyebrow">Made with care</p>
+          <h2 class="h2-subtitle" id="featured-drinks-title">Featured drinks</h2>
+          <p class="section-description">Thoughtfully sourced coffee, carefully prepared, and always worth slowing down
+            for.</p>
+        </header>
+        <div class="drink-grid">
+          <article class="drink-card">
+            <p class="drink-category">01 <span>Espresso bar</span></p>
+            <h3>Coffees</h3>
+            <p>Rich, balanced shots and silky milk drinks made to bring out every note of our beans.</p>
+            <a class="drink-link" href="products.html?category=coffee#product-catalog">Discover the menu <span
+                aria-hidden="true">↗</span></a>
+          </article>
+          <article class="drink-card">
+            <p class="drink-category">02 <span>Cool &amp; refreshing</span></p>
+            <h3>Beverages</h3>
+            <p>Chilled coffee, smooth textures, and a little sweetness for warmer Colombo afternoons.</p>
+            <a class="drink-link" href="products.html?category=beverages#product-catalog">Discover the menu <span
+                aria-hidden="true">↗</span></a>
+          </article>
+          <article class="drink-card">
+            <p class="drink-category">03 <span>Fresh from the oven</span></p>
+            <h3>Cakes &amp; bakes</h3>
+            <p>A flaky bun, a soft slice of cake, or something chocolatey for your coffee break.</p>
+            <a class="drink-link" href="products.html?category=cakes#product-catalog">Discover the menu <span
+                aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <div class="coffee-feature" id="about-us">
+          <div class="coffee-feature-copy">
+            <p class="eyebrow">Your daily pause</p>
+            <h2>Good coffee.<br>Good company.</h2>
+            <p>Find your new favorite, settle in, and make a little room in your day.</p>
+            <a class="drink-link" href="about.html">Our story <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="The Caffeine Culture style guide: shared colors, typography, buttons, links, and design examples.">
+  <title>Style Guide | The Caffeine Culture</title>
+  <link rel="icon" type="image/png" href="assets/images/Logo/Logo%20Transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto+Slab:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main-content" tabindex="-1" class="sg-page content-width">
+    <header class="sg-intro">
+      <p class="eyebrow">The Caffeine Culture</p>
+      <h1 class="h1-title light">Style Guide</h1>
+      <p class="sg-description">Preview the shared colors, typography, buttons, and links used throughout the website.
+        The product catalog, cart, and checkout use the same coffee-brown palette and responsive components.
+      </p>
+      <nav class="sg-jump-links" aria-label="Style guide sections">
+        <a href="#buttons" aria-label="Buttons">Buttons</a>
+        <a href="#links" aria-label="Text links">Text links</a>
+        <a href="#arrows" aria-label="Arrow links">Arrow links</a>
+        <a href="#colors" aria-label="Colors">Colors</a>
+        <a href="#typography" aria-label="Typography">Typography</a>
+      </nav>
+    </header>
+
+    <section class="sg-section test-color" id="colors" aria-labelledby="colors-title">
+      <div class="section-heading">
+        <h2 id="colors-title">Color palette</h2>
+        <p class="sg-description">These swatches use the existing Sass variables in
+          <code>scss/abstracts/_variables.scss</code>.
+        </p>
+      </div>
+      <div class="sg-colors">
+        <figure class="sg-swatch">
+          <div class="sg-color colour1" aria-hidden="true"></div>
+          <figcaption><strong>Coffee brown</strong><code>$color-coffee-brown</code><span>#4c2b0b</span></figcaption>
+        </figure>
+        <figure class="sg-swatch">
+          <div class="sg-color colour4" aria-hidden="true"></div>
+          <figcaption><strong>Coffee dark</strong><code>$color-coffee-dark</code><span>#934e1a</span></figcaption>
+        </figure>
+        <figure class="sg-swatch">
+          <div class="sg-color colour2" aria-hidden="true"></div>
+          <figcaption><strong>Coffee light</strong><code>$color-coffee-light</code><span>#ba936a</span></figcaption>
+        </figure>
+        <figure class="sg-swatch">
+          <div class="sg-color colour3" aria-hidden="true"></div>
+          <figcaption><strong>Gold</strong><code>$color-gold</code><span>#c89e5b</span></figcaption>
+        </figure>
+        <figure class="sg-swatch">
+          <div class="sg-color colour5" aria-hidden="true"></div>
+          <figcaption><strong>Amber</strong><code>$color-accent-amber</code><span>#a07235</span></figcaption>
+        </figure>
+        <figure class="sg-swatch">
+          <div class="sg-color colour6" aria-hidden="true"></div>
+          <figcaption><strong>Cream</strong><code>$color-cream</code><span>#edd9b6</span></figcaption>
+        </figure>
+        <figure class="sg-swatch">
+          <div class="sg-color colour7" aria-hidden="true"></div>
+          <figcaption><strong>White</strong><code>$color-white</code><span>#ffffff</span></figcaption>
+        </figure>
+        <figure class="sg-swatch">
+          <div class="sg-color colour9" aria-hidden="true"></div>
+          <figcaption><strong>Secondary background</strong><code>$color-bg-secondary</code><span>#1b120d</span>
+          </figcaption>
+        </figure>
+        <figure class="sg-swatch">
+          <div class="sg-color colour8" aria-hidden="true"></div>
+          <figcaption><strong>Hero gradient</strong><code>$gradient-hero</code></figcaption>
+        </figure>
+        <figure class="sg-swatch">
+          <div class="sg-color colour10" aria-hidden="true"></div>
+          <figcaption><strong>Amber glow</strong><code>$gradient-amber-glow</code></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="sg-section test-button" id="buttons" aria-labelledby="buttons-title">
+      <div class="section-heading">
+        <h2 id="buttons-title">Buttons that link to a page</h2>
+        <p class="sg-description">Use <code>&lt;a href="..."&gt;</code> with <code>btn</code> and one variant class.
+          These previews use the shared styles directly.</p>
+        <p class="sg-note">Hover to preview on desktop, or tap and hold on a touch screen. Press feedback appears
+          immediately; releasing returns to the normal style. Tab focus uses only a 3px outline with a 3px offset.
+          Reduced-motion preferences
+          remove the transitions.</p>
+      </div>
+      <div class="sg-grid">
+        <article class="sg-card" aria-labelledby="action-title">
+          <h3 class="sg-card-title" id="action-title">Action button</h3>
+          <div class="sg-preview">
+            <a href="index.html" class="btn action-btn" aria-label="Go to the Home page">Home</a>
+          </div>
+        </article>
+        <article class="sg-card" aria-labelledby="ghost-title">
+          <h3 class="sg-card-title" id="ghost-title">Ghost button</h3>
+          <div class="sg-preview">
+            <a href="style-guide.html" class="btn ghost-btn" aria-label="View the Style Guide">Style Guide</a>
+          </div>
+        </article>
+        <article class="sg-card" aria-labelledby="light-title">
+          <h3 class="sg-card-title" id="light-title">Light button</h3>
+          <div class="sg-preview">
+            <a href="index.html#featured-drinks" class="btn light-btn" aria-label="View featured drinks">Featured
+              Drinks</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sg-section test-links" id="links" aria-labelledby="links-title">
+      <div class="section-heading">
+        <h2 id="links-title">Text links</h2>
+        <p class="sg-description">Preview the link styles against a dark surface.</p>
+      </div>
+      <div class="sg-grid">
+        <article class="sg-card" aria-labelledby="dark-link-title">
+          <h3 class="sg-card-title" id="dark-link-title">Dark link</h3>
+          <div class="sg-preview sg-preview-dark">
+            <a href="index.html#featured-drinks" class="dark-link" aria-label="Explore featured drinks">
+              Featured Drinks
+            </a>
+          </div>
+        </article>
+        <article class="sg-card" aria-labelledby="light-link-title">
+          <h3 class="sg-card-title" id="light-link-title">Light link</h3>
+          <div class="sg-preview">
+            <a href="style-guide.html" class="light-link" aria-label="View the Style Guide">
+              Style Guide
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sg-section test-arrows" id="arrows" aria-labelledby="arrows-title">
+      <div class="section-heading">
+        <h2 id="arrows-title">Arrow links</h2>
+        <p class="sg-description">Keep both links inside <code>arrows-pair</code> so the first arrow points back. These
+          examples navigate to pages, so they use anchors with accessible labels.</p>
+        <p class="sg-note">For a JavaScript carousel, use <code>&lt;button type="button"&gt;</code> with these same
+          classes and labels instead of a link. A button performs an action; a link opens a destination.</p>
+      </div>
+      <div class="sg-grid">
+        <article class="sg-card" aria-labelledby="dark-arrows-title">
+          <h3 class="sg-card-title" id="dark-arrows-title">Dark arrow pair</h3>
+          <div class="sg-preview">
+            <div class="arrows-pair">
+              <a href="index.html" class="slider-arrow dark-arrow" aria-label="Previous: Home page">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <a href="style-guide.html" class="slider-arrow dark-arrow" aria-label="Next: Style Guide">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="sg-card" aria-labelledby="ghost-arrows-title">
+          <h3 class="sg-card-title" id="ghost-arrows-title">Ghost arrow pair</h3>
+          <div class="sg-preview">
+            <div class="arrows-pair">
+              <a href="index.html" class="slider-arrow ghost-arrow" aria-label="Previous: Home page">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <a href="style-guide.html" class="slider-arrow ghost-arrow" aria-label="Next: Style Guide">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="sg-card" aria-labelledby="light-arrows-title">
+          <h3 class="sg-card-title" id="light-arrows-title">Light arrow pair</h3>
+          <div class="sg-preview">
+            <div class="arrows-pair">
+              <a href="index.html" class="slider-arrow light-arrow" aria-label="Previous: Home page">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <a href="style-guide.html" class="slider-arrow light-arrow" aria-label="Next: Style Guide">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sg-section typography-test" id="typography" aria-labelledby="typography-title">
+      <div class="section-heading">
+        <h2 id="typography-title">Typography</h2>
+        <p class="sg-description">Use the heading level that fits your page structure. The utility classes below also
+          let you apply the same visual styles to other text elements. Type sizes switch from mobile to desktop at
+          992px; each <code>.light</code> variant uses the color shown.</p>
+      </div>
+      <div class="sg-type-sample">
+        <code>Heading 1 / .h1-title — Merriweather, 38px mobile / 46px desktop</code>
+        <div class="sg-type-variants">
+          <div class="sg-type-variant sg-type-variant-h1">
+            <code>Default / $color-coffee-brown (#4c2b0b)</code>
+            <p class="h1-title">Start your day with a black coffee</p>
+          </div>
+          <div class="sg-type-variant sg-type-variant-h1-light">
+            <code>Light / .light / $color-cream</code>
+            <p class="h1-title light">Start your day with a black coffee</p>
+          </div>
+        </div>
+      </div>
+      <div class="sg-type-sample">
+        <code>Heading 2 / .h2-subtitle — Roboto Slab, 27px mobile / 38px desktop</code>
+        <div class="sg-type-variants">
+          <div class="sg-type-variant sg-type-variant-h2">
+            <code>Default / $color-accent-amber (#a07235)</code>
+            <p class="h2-subtitle">Good coffee, made with care</p>
+          </div>
+          <div class="sg-type-variant sg-type-variant-h2-light">
+            <code>Light / .light / $color-accent-amber</code>
+            <p class="h2-subtitle light">Good coffee, made with care</p>
+          </div>
+        </div>
+      </div>
+      <div class="sg-type-sample">
+        <code>Heading 3 / .h3-style — italic Merriweather, 25px mobile / 28px desktop</code>
+        <div class="sg-type-variants">
+          <div class="sg-type-variant sg-type-variant-h3">
+            <code>Default / $color-coffee-dark (#934e1a)</code>
+            <p class="h3-style">A moment worth enjoying</p>
+          </div>
+          <div class="sg-type-variant sg-type-variant-h3-light">
+            <code>Light / .light / $color-coffee-light</code>
+            <p class="h3-style light">A moment worth enjoying</p>
+          </div>
+        </div>
+      </div>
+      <div class="sg-type-sample">
+        <code>Body text / .body-text — Roboto Slab, 15px mobile / 17px desktop</code>
+        <div class="sg-type-variants">
+          <div class="sg-type-variant sg-type-variant-body">
+            <code>Default / $color-bg-primary</code>
+            <p class="body-text">Premium coffee, handcrafted beverages, and warm conversations.</p>
+          </div>
+          <div class="sg-type-variant sg-type-variant-body-light">
+            <code>Light / .light / $color-white</code>
+            <p class="body-text light">Premium coffee, handcrafted beverages, and warm conversations.</p>
+          </div>
+        </div>
+      </div>
+      <div class="sg-type-sample">
+        <code>Eyebrow / .eyebrow</code>
+        <p class="eyebrow">The Caffeine Culture</p>
+      </div>
+    </section>
+
+    <section class="sg-section" id="guide-end" aria-labelledby="guide-end-title">
+      <div class="end-section">
+        <div class="section-heading">
+          <p class="eyebrow">The Caffeine Culture Style Guide</p>
+          <p class="sg-description">Explore the shared components and use them to keep every page consistent with The
+            Caffeine Culture.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+
+</html>

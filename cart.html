@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review your Caffeine Culture cart before checkout.">
+  <meta name="theme-color" content="#100b08">
+  <title>Your Cart | The Caffeine Culture</title>
+  <link rel="icon" type="image/png" href="assets/images/Logo/Logo%20Transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:opsz,wdth,wght@18..144,87..112,300..900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main-content" class="site-page shop-page" tabindex="-1">
+    <section class="shop-hero">
+      <div class="content-width">
+        <p class="eyebrow">Your coffee, your way</p>
+        <h1 class="h1-title light">Your cart.</h1>
+        <p>Take a moment to review your picks before checkout.</p>
+      </div>
+    </section>
+
+    <section class="shop-section">
+      <div class="content-width">
+        <div class="shop-heading">
+          <div>
+            <p class="eyebrow">Almost yours</p>
+            <h2>Your selection</h2>
+          </div>
+          <p data-cart-page-count aria-live="polite"></p>
+        </div>
+
+        <div class="cart-layout">
+          <div class="cart-items" data-cart-items></div>
+          <aside class="cart-summary" aria-labelledby="cart-summary-title">
+            <p class="eyebrow">Order summary</p>
+            <h2 id="cart-summary-title">A good choice.</h2>
+            <div class="cart-total-row">
+              <span>Subtotal</span>
+              <strong data-cart-total>Rs. 0</strong>
+            </div>
+            <p class="cart-summary-note">Delivery or pickup details can be reviewed at checkout.</p>
+            <a class="btn action-btn" data-cart-checkout href="checkout.html">Continue to checkout</a>
+            <a class="shop-text-link" href="products.html">Keep browsing</a>
+          </aside>
+        </div>
+
+        <div class="cart-empty" data-cart-empty hidden>
+          <p class="eyebrow">Nothing in your cart just yet</p>
+          <h2>There’s something good brewing.</h2>
+          <a class="btn action-btn" href="products.html">Explore the menu</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+
+</html>

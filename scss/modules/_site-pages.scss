@@ -1,0 +1,1105 @@
+.site-page {
+  color: $color-cream;
+
+  .page-hero {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    min-height: min(680px, 78svh);
+    align-items: center;
+    padding: 90px 0 72px;
+    background-color: $color-bg-primary;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      background:
+        linear-gradient(90deg, rgba($color-bg-primary, 0.9), rgba($color-bg-primary, 0.48)),
+        var(--page-hero-image) center / cover no-repeat;
+    }
+
+    .page-hero-content {
+      display: flex;
+      max-width: 760px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .eyebrow {
+      color: $color-gold;
+    }
+
+    .h1-title {
+      color: $color-cream;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.06;
+    }
+
+    .body-text {
+      max-width: 600px;
+      color: rgba($color-cream, 0.84);
+      letter-spacing: 0;
+    }
+  }
+
+  .light-section {
+    color: $color-bg-primary;
+    background: $color-cream;
+  }
+
+  .dark-section {
+    color: $color-cream;
+    background: $color-bg-secondary;
+  }
+
+  .section-intro {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    margin-bottom: 36px;
+    text-align: center;
+
+    .eyebrow {
+      color: $color-accent-amber;
+    }
+
+    .h2-subtitle {
+      color: $color-coffee-brown;
+      font-family: $font-family-sub;
+      font-size: clamp(30px, 5vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .section-description {
+      max-width: 620px;
+      color: rgba($color-bg-primary, 0.72);
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+  }
+
+  .products-hero {
+    --page-hero-image: url("../images/Background/Background%202.jpg");
+  }
+
+  .about-hero {
+    --page-hero-image: url("../images/Background/Background%203.jpg");
+  }
+
+  .club-hero {
+    --page-hero-image: url("../images/Background/Background%206.jpg");
+  }
+
+  .contact-hero {
+    --page-hero-image: url("../images/Background/Background%207.jpg");
+  }
+}
+
+.catalog-section {
+  padding: 82px 0 92px;
+  color: $color-cream;
+  background: $color-bg-secondary;
+
+  .section-intro {
+    .eyebrow {
+      color: $color-gold;
+    }
+
+    .h2-subtitle {
+      color: $color-gold;
+    }
+
+    .section-description {
+      color: rgba($color-cream, 0.72);
+    }
+  }
+}
+
+.catalog-tools {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 18px;
+
+  @include laptop {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+    align-items: center;
+  }
+}
+
+.catalog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-chip {
+  @include button-reset;
+  @include tab-pressed;
+
+  min-height: 42px;
+  padding: 9px 16px;
+  border: 1px solid rgba($color-gold, 0.32);
+  border-radius: 999px;
+  color: rgba($color-cream, 0.8);
+  background: rgba($color-bg-primary, 0.42);
+  font: 600 13px/1.3 $font-family-sub;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover,
+  &.is-active {
+    border-color: $color-gold;
+    color: $color-bg-primary;
+    background: $color-gold;
+  }
+}
+
+.catalog-search-form {
+  width: 100%;
+}
+
+.catalog-status {
+  min-height: 24px;
+  margin-bottom: 14px;
+  color: rgba($color-cream, 0.68);
+  font: 13px/1.5 $font-family-sub;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @include tablet-portrait {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include tablet-landscape {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  @include laptop {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.product-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba($color-gold, 0.24);
+  border-radius: 12px;
+  background: rgba($color-bg-primary, 0.62);
+  box-shadow:
+    0 14px 34px rgba($color-bg-primary, 0.16),
+    inset 0 1px 0 rgba($color-cream, 0.04);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+
+  @include hover-styles {
+    transform: translateY(-4px);
+    border-color: rgba($color-gold, 0.56);
+  }
+
+  &[hidden] {
+    display: none;
+  }
+
+  > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.3;
+    object-fit: cover;
+  }
+
+  .product-card-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .product-kicker {
+    color: $color-gold;
+    font: 700 11px/1.5 $font-family-sub;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin-top: 10px;
+    color: $color-cream;
+    font: 600 22px/1.25 $font-family-main;
+  }
+
+  .product-card-footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+  }
+
+  .product-price {
+    color: $color-cream;
+    font: 600 15px/1.3 $font-family-sub;
+    white-space: nowrap;
+  }
+
+  .product-add-button {
+    min-width: 134px;
+    justify-content: flex-start;
+    padding: 8px 30px 8px 12px;
+    font-size: 13px;
+  }
+
+  .product-add-button.is-added {
+    color: $color-cream;
+    background: $color-coffee-brown;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  p:not(.product-kicker) {
+    margin-top: 10px;
+    color: rgba($color-cream, 0.72);
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .product-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 20px;
+    color: $color-gold;
+    font: 600 13px/1.4 $font-family-sub;
+    text-decoration: none;
+
+    &:focus-visible {
+      outline: 2px solid $color-gold;
+      outline-offset: 4px;
+    }
+  }
+}
+
+.catalog-empty {
+  padding: 28px 0;
+  color: rgba($color-cream, 0.78);
+  text-align: center;
+}
+
+.catalog-cta,
+.page-cta,
+.contact-note {
+  padding: 72px 0;
+  text-align: center;
+
+  > .content-width {
+    display: grid;
+    justify-items: center;
+    gap: 18px;
+  }
+
+  .eyebrow {
+    color: $color-accent-amber;
+  }
+
+  h2 {
+    max-width: 760px;
+    color: $color-coffee-brown;
+    font: 400 clamp(30px, 5vw, 46px)/1.15 $font-family-main;
+  }
+}
+
+.story-section {
+  padding: 80px 0;
+}
+
+.story-layout {
+  display: grid;
+  align-items: center;
+  gap: 36px;
+
+  @include tablet-landscape {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 64px;
+  }
+}
+
+.story-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+
+  .eyebrow {
+    color: $color-accent-amber;
+  }
+
+  h2 {
+    color: $color-coffee-brown;
+    font: 400 clamp(32px, 4vw, 48px)/1.14 $font-family-main;
+  }
+
+  p:not(.eyebrow) {
+    max-width: 600px;
+    color: rgba($color-bg-primary, 0.76);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+}
+
+.story-image {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  max-height: 480px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.values-section,
+.club-benefits {
+  padding: 82px 0;
+
+  .section-intro {
+    .eyebrow {
+      color: $color-gold;
+    }
+
+    .h2-subtitle {
+      color: $color-gold;
+    }
+
+    .section-description {
+      color: rgba($color-cream, 0.72);
+    }
+  }
+}
+
+.club-benefits {
+  color: $color-bg-primary;
+  background: $color-cream;
+
+  .section-intro {
+    .eyebrow {
+      color: $color-accent-amber;
+    }
+
+    .h2-subtitle {
+      color: $color-coffee-brown;
+    }
+
+    .section-description {
+      color: rgba($color-bg-primary, 0.72);
+    }
+  }
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+
+  @include tablet-portrait {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.value-card {
+  min-height: 220px;
+  padding: 26px;
+  border: 1px solid rgba($color-gold, 0.28);
+  border-radius: 10px;
+  background: rgba($color-bg-primary, 0.34);
+
+  .value-number {
+    color: $color-gold;
+    font: 600 13px/1.4 $font-family-sub;
+    letter-spacing: 1.2px;
+  }
+
+  h3 {
+    margin-top: 26px;
+    color: $color-cream;
+    font: 600 21px/1.3 $font-family-main;
+  }
+
+  p {
+    margin-top: 10px;
+    color: rgba($color-cream, 0.72);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .club-benefits & {
+    border-color: rgba($color-coffee-brown, 0.2);
+    background: rgba($color-white, 0.42);
+
+    h3 {
+      color: $color-coffee-brown;
+    }
+
+    p {
+      color: rgba($color-bg-primary, 0.72);
+    }
+  }
+}
+
+.club-signup {
+  padding: 82px 0;
+  background: $gradient-hero;
+}
+
+.club-signup-layout,
+.contact-layout {
+  display: grid;
+  align-items: start;
+  gap: 38px;
+
+  @include tablet-landscape {
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.8fr);
+    gap: 72px;
+  }
+
+  > div:first-child {
+    .eyebrow {
+      color: $color-gold;
+    }
+
+    h2 {
+      margin-top: 14px;
+      color: $color-cream;
+      font: 400 clamp(32px, 4vw, 48px)/1.15 $font-family-main;
+    }
+
+    p:not(.eyebrow) {
+      max-width: 540px;
+      margin-top: 16px;
+      color: rgba($color-cream, 0.74);
+      line-height: 1.7;
+    }
+  }
+}
+
+.email-compose-form {
+  display: grid;
+  gap: 10px;
+
+  > .eyebrow {
+    margin-bottom: 4px;
+    color: $color-gold;
+  }
+
+  label {
+    margin-top: 6px;
+    color: rgba($color-cream, 0.86);
+    font: 500 13px/1.4 $font-family-sub;
+  }
+
+  .form-control {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid rgba($color-gold, 0.38);
+    border-radius: 7px;
+    color: $color-cream;
+    background: rgba($color-bg-primary, 0.56);
+    font: 14px/1.5 $font-family-sub;
+
+    &::placeholder {
+      color: rgba($color-cream, 0.56);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-gold;
+      outline-offset: 2px;
+    }
+  }
+
+  textarea.form-control {
+    resize: vertical;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+
+  .form-note {
+    color: rgba($color-cream, 0.64);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+.contact-section {
+  padding: 82px 0;
+}
+
+.contact-layout {
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    .eyebrow {
+      color: $color-accent-amber;
+    }
+
+    h2 {
+      color: $color-coffee-brown;
+      font: 400 clamp(32px, 4vw, 46px)/1.15 $font-family-main;
+    }
+
+    address,
+    .contact-detail-link {
+      color: rgba($color-bg-primary, 0.76);
+      font-style: normal;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-detail-link {
+      text-decoration-color: rgba($color-accent-amber, 0.5);
+      text-underline-offset: 4px;
+    }
+  }
+
+  .contact-form {
+    padding: 26px;
+    border: 1px solid rgba($color-gold, 0.28);
+    border-radius: 12px;
+    background: $color-bg-secondary;
+  }
+}
+
+.contact-note {
+  background: $color-bg-secondary;
+
+  .eyebrow {
+    color: $color-gold;
+  }
+
+  h2 {
+    color: $color-cream;
+  }
+}
+
+.shop-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: 310px;
+  align-items: end;
+  padding: 120px 0 42px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba($color-bg-primary, 0.96), rgba($color-bg-primary, 0.58)),
+    url("../images/Background/Background%202.jpg") center 48% / cover no-repeat;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    inset: auto 0 0;
+    height: 1px;
+    content: "";
+    background: linear-gradient(90deg, transparent, rgba($color-gold, 0.72), transparent);
+  }
+
+  .eyebrow {
+    color: $color-gold;
+  }
+
+  .h1-title {
+    margin-top: 10px;
+    color: $color-cream;
+    font-size: clamp(42px, 6vw, 64px);
+  }
+
+  p:not(.eyebrow) {
+    max-width: 620px;
+    margin-top: 12px;
+    color: rgba($color-cream, 0.78);
+    line-height: 1.65;
+  }
+}
+
+.shop-section {
+  min-height: 48vh;
+  padding: 52px 0 88px;
+  color: $color-cream;
+  background:
+    radial-gradient(ellipse at 85% 0, rgba($color-coffee-dark, 0.16), transparent 34rem),
+    $color-bg-primary;
+}
+
+.shop-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 28px;
+
+  .eyebrow {
+    color: $color-gold;
+  }
+
+  h2 {
+    margin-top: 8px;
+    color: $color-cream;
+    font: 400 clamp(27px, 4vw, 38px)/1.2 $font-family-main;
+  }
+
+  > p {
+    color: rgba($color-cream, 0.7);
+    font: 14px/1.4 $font-family-sub;
+  }
+}
+
+.cart-layout,
+.checkout-layout {
+  display: grid;
+  align-items: start;
+  gap: 24px;
+
+  @include tablet-landscape {
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+    gap: 32px;
+  }
+}
+
+.cart-items {
+  display: grid;
+  gap: 12px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid rgba($color-gold, 0.18);
+  border-radius: 14px;
+  background: linear-gradient(130deg, rgba($color-bg-secondary, 0.94), rgba($color-bg-secondary, 0.68));
+  box-shadow: inset 0 1px rgba($color-cream, 0.04);
+
+  > img {
+    width: 76px;
+    height: 76px;
+    border-radius: 9px;
+    object-fit: cover;
+  }
+
+  .product-kicker {
+    color: $color-gold;
+    font: 600 10px/1.5 $font-family-sub;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin-top: 3px;
+    color: $color-cream;
+    font: 600 16px/1.35 $font-family-main;
+  }
+
+  .cart-item-copy > p:last-child {
+    margin-top: 5px;
+    color: rgba($color-cream, 0.65);
+    font: 12px/1.4 $font-family-sub;
+  }
+}
+
+.cart-item-controls {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px;
+  border: 1px solid rgba($color-gold, 0.24);
+  border-radius: 999px;
+  color: $color-cream;
+  font: 600 13px/1 $font-family-sub;
+
+  button {
+    @include button-reset;
+    @include tab-pressed;
+
+    display: grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    border-radius: 50%;
+    color: $color-bg-primary;
+    background: $color-cream;
+    font: 600 18px/1 $font-family-sub;
+
+    &:hover {
+      background: $color-gold;
+    }
+  }
+}
+
+.cart-item-total {
+  grid-column: 2;
+  color: $color-cream;
+  font: 600 14px/1.3 $font-family-sub;
+}
+
+.cart-item-remove {
+  @include button-reset;
+  @include tab-pressed;
+
+  grid-column: 3;
+  color: rgba($color-cream, 0.62);
+  font: 12px/1.4 $font-family-sub;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: $color-gold;
+  }
+}
+
+.cart-summary,
+.checkout-summary {
+  padding: 24px;
+  border: 1px solid rgba($color-gold, 0.28);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 100% 0, rgba($color-gold, 0.12), transparent 15rem),
+    $color-bg-secondary;
+  box-shadow:
+    0 16px 38px rgba($color-bg-primary, 0.22),
+    inset 0 1px rgba($color-cream, 0.05);
+
+  .eyebrow {
+    color: $color-gold;
+  }
+
+  h2 {
+    margin-top: 9px;
+    color: $color-cream;
+    font: 400 24px/1.25 $font-family-main;
+  }
+
+  .action-btn {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  @include tablet-landscape {
+    position: sticky;
+    top: 112px;
+  }
+}
+
+.cart-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid rgba($color-gold, 0.24);
+  color: rgba($color-cream, 0.78);
+  font: 14px/1.4 $font-family-sub;
+
+  strong {
+    color: $color-cream;
+    font-size: 17px;
+  }
+}
+
+.cart-summary-note,
+.checkout-disclaimer {
+  margin-top: 12px;
+  color: rgba($color-cream, 0.62);
+  font: 12px/1.65 $font-family-sub;
+}
+
+.shop-text-link {
+  display: inline-flex;
+  margin-top: 20px;
+  color: $color-gold;
+  font: 600 13px/1.5 $font-family-sub;
+  text-underline-offset: 4px;
+
+  &:hover {
+    color: $color-cream;
+  }
+}
+
+.cart-empty {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  padding: 54px 22px;
+  border: 1px dashed rgba($color-gold, 0.32);
+  border-radius: 16px;
+  text-align: center;
+  background: rgba($color-bg-secondary, 0.58);
+
+  .eyebrow {
+    color: $color-gold;
+  }
+
+  h2 {
+    color: $color-cream;
+    font: 400 clamp(24px, 4vw, 34px)/1.25 $font-family-main;
+  }
+}
+
+.checkout-steps {
+  display: flex;
+  justify-content: center;
+  gap: clamp(18px, 7vw, 86px);
+  margin: 0 0 34px;
+  padding: 0;
+  color: rgba($color-cream, 0.48);
+  font: 600 12px/1.4 $font-family-sub;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba($color-gold, 0.22);
+  }
+
+  [aria-current="step"] {
+    color: $color-gold;
+    border-color: $color-gold;
+  }
+}
+
+.checkout-form {
+  display: grid;
+  gap: 24px;
+
+  fieldset {
+    display: grid;
+    gap: 10px;
+    min-width: 0;
+    margin: 0;
+    padding: 22px;
+    border: 1px solid rgba($color-gold, 0.22);
+    border-radius: 14px;
+    background: rgba($color-bg-secondary, 0.66);
+  }
+
+  legend {
+    padding: 0 8px;
+    color: $color-gold;
+    font: 600 16px/1.4 $font-family-sub;
+  }
+
+  > fieldset > label {
+    margin-top: 4px;
+    color: rgba($color-cream, 0.82);
+    font: 500 13px/1.4 $font-family-sub;
+  }
+
+  > fieldset > label span {
+    color: rgba($color-cream, 0.54);
+    font-weight: 400;
+  }
+
+  .form-control {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid rgba($color-gold, 0.3);
+    border-radius: 8px;
+    color: $color-cream;
+    background: rgba($color-bg-primary, 0.72);
+    font: 14px/1.5 $font-family-sub;
+
+    &:focus-visible {
+      outline: 2px solid $color-gold;
+      outline-offset: 2px;
+    }
+  }
+
+  textarea.form-control {
+    resize: vertical;
+  }
+
+  > .action-btn {
+    justify-self: start;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.fulfilment-options {
+  display: grid;
+  gap: 10px;
+
+  @include tablet-portrait {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.fulfilment-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgba($color-gold, 0.2);
+  border-radius: 10px;
+  color: $color-cream;
+  background: rgba($color-bg-primary, 0.48);
+  cursor: pointer;
+
+  &:has(input:checked) {
+    border-color: rgba($color-gold, 0.72);
+    background: rgba($color-coffee-brown, 0.36);
+  }
+
+  input {
+    margin-top: 3px;
+    accent-color: $color-gold;
+  }
+
+  span {
+    display: grid;
+    gap: 4px;
+  }
+
+  strong {
+    font: 600 13px/1.4 $font-family-sub;
+  }
+
+  small {
+    color: rgba($color-cream, 0.64);
+    font: 12px/1.45 $font-family-sub;
+  }
+}
+
+.checkout-items {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: rgba($color-cream, 0.82);
+    font: 13px/1.5 $font-family-sub;
+  }
+
+  strong {
+    color: $color-cream;
+    white-space: nowrap;
+  }
+}
+
+.checkout-quantity {
+  color: rgba($color-cream, 0.56);
+}
+
+.checkout-notice {
+  padding: 16px;
+  border: 1px solid rgba($color-gold, 0.42);
+  border-radius: 10px;
+  color: $color-cream;
+  background: rgba($color-coffee-brown, 0.34);
+  font: 13px/1.65 $font-family-sub;
+
+  &:focus {
+    outline: 2px solid $color-gold;
+    outline-offset: 3px;
+  }
+}
+
+@include mobile {
+  .site-page .page-hero {
+    min-height: 600px;
+    padding-block: 100px 64px;
+  }
+
+  .catalog-section,
+  .story-section,
+  .values-section,
+  .club-benefits,
+  .club-signup,
+  .contact-section {
+    padding-block: 58px;
+  }
+
+  .catalog-tools .site-search {
+    max-width: none;
+  }
+
+  .story-image {
+    min-height: 240px;
+  }
+
+  .shop-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cart-item {
+    grid-template-columns: 62px minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 11px;
+
+    > img {
+      width: 62px;
+      height: 62px;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+  }
+
+  .cart-item-controls {
+    grid-column: 2;
+    justify-self: start;
+    gap: 7px;
+  }
+
+  .cart-item-total {
+    grid-column: 3;
+    grid-row: 2;
+    text-align: right;
+  }
+
+  .cart-item-remove {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+  }
+
+  .checkout-form .action-btn {
+    width: 100%;
+  }
+}

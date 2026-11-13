@@ -1,0 +1,169 @@
+/* Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: $color-bg-primary;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@mixin button-reset {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Breakpoints */
+// Mobile: up to 767px
+@mixin mobile {
+  @media (max-width: #{$screen-tablet-portrait-min - 1}) {
+    @content;
+  }
+}
+
+// Mobile landscape: up to 991px, landscape only
+@mixin mobile-landscape {
+  @media (max-width: #{$screen-tablet-landscape-min - 1}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// Tablet portrait and up
+@mixin tablet-portrait {
+  @media (min-width: $screen-tablet-portrait-min) {
+    @content;
+  }
+}
+
+// Tablet landscape and up
+@mixin tablet-landscape {
+  @media (min-width: $screen-tablet-landscape-min) {
+    @content;
+  }
+}
+
+// Laptop and up
+@mixin laptop {
+  @media (min-width: $screen-laptop-min) {
+    @content;
+  }
+}
+
+// Desktop and up
+@mixin desktop {
+  @media (min-width: $screen-desktop-min) {
+    @content;
+  }
+}
+
+// Wide desktop: 1600px and above
+@mixin wide-desktop {
+  @media (min-width: $screen-wide-min) {
+    @content;
+  }
+}
+
+/* Hover */
+@mixin hover-devices {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin hover-styles {
+  @include hover-devices {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+/* Accessibility */
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  white-space: nowrap;
+
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+}
+
+// Keyboard focus adds only an outline with a clear gap.
+@mixin tab-pressed($offset: 3px, $width: 3px) {
+  &:focus-visible {
+    outline: $width solid $color-gold;
+    outline-offset: $offset;
+  }
+}
+
+.sr-only {
+  @include visually-hidden;
+}
+
+/* Typography */
+@mixin text-styling(
+  $font-family,
+  $color,
+  $mobile-size,
+  $mobile-spacing,
+  $mobile-line-height,
+  $desktop-size,
+  $desktop-spacing,
+  $desktop-line-height
+) {
+  font-family: $font-family;
+  color: $color;
+  font-size: $mobile-size;
+  line-height: $mobile-line-height;
+  letter-spacing: letter-spacing($mobile-size, $mobile-spacing);
+  font-optical-sizing: auto;
+
+  @include tablet-landscape {
+    font-size: $desktop-size;
+    line-height: $desktop-line-height;
+    letter-spacing: letter-spacing($desktop-size, $desktop-spacing);
+  }
+}
+
+/* Functions */
+@function letter-spacing($font-size, $spacing-percent: 1%) {
+  @return calc($font-size * $spacing-percent / 100);
+}
+
+/* Layout */
+.content-width {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  max-width: 1600px;
+
+  @include tablet-portrait {
+    width: calc(100% - 60px);
+  }
+
+  @include desktop {
+    width: calc(100% - 100px);
+  }
+}
